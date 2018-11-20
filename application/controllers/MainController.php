@@ -3,7 +3,6 @@
 namespace application\controllers;
 
 use application\core\Controller;
-use application\lib\Db;
 
 /**
  * Main Controller
@@ -13,8 +12,11 @@ class MainController extends Controller
 	
 	public function indexAction()
 	{
-
-		$this->view->render('Main page');
+		$result = $this->model->getNews();
+		$vars = [
+			'news' => $result,
+		];
+		$this->view->render('Main page', $vars);
 	}
 
 }

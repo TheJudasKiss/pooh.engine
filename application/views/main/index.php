@@ -1,3 +1,7 @@
-<h1 class='uk-heading-line uk-text-center'><span>Heading Line</span></h1>
+<p><?=$title?></p>
 
-<?=$title?>
+<?php foreach ($news as $val): ?>
+	<h3><?=$val['title']?></h3>
+	<p><?=$val['msg']?></p>
+	<hr>
+<?php endforeach; ?>

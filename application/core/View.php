@@ -41,6 +41,9 @@ class View
 		exit;
 	}
 
+	/**
+	* 404 and other error pages
+	*/
 	public static function errorCode($code)
 	{
 		http_response_code($code);
@@ -49,6 +52,22 @@ class View
 			require $path;
 		}
 		exit;
+	}
+
+	/**
+	* message from Ajax form
+	*/
+	public function message($status, $message)
+	{
+		exit(json_encode(['status' => $status, 'message' => $message]));
+	}
+
+	/**
+	* redirect on JS
+	*/
+	public function location($url)
+	{
+		exit(json_encode(['url' => $url]));
 	}
 
 }

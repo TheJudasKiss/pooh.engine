@@ -1,4 +1,3 @@
-<h1 class='uk-heading-line uk-text-center'><span>Register</span></h1>
 <div class="uk-container">
 	<div class="uk-child-width-expand@s uk-text-center" uk-grid>
 	
